@@ -1,0 +1,21 @@
+class Tester {
+    public static boolean checkNameValidity(String name) {
+        
+        
+        if(name.length()>30 || name.charAt(0) == ' ' || name.charAt(name.length()-1) == ' '  ){
+            return false;
+        }
+       
+       
+       
+        String regex1 = "([A-Z][A-Za-z]{1,29} ?){1,}";
+        return name.matches(regex1);
+    }
+    
+    public static void main(String[] args) {
+        
+        //Change the value of name for testing your code with different names
+        String name = "Roger Federer";
+        System.out.println("The name is "+ (checkNameValidity(name) ? "valid!" : "invalid!"));      
+    }
+}
