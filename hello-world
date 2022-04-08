@@ -31,7 +31,7 @@ pipeline {
                 echo 'Save the assemblies generated from the compilation' 
             }
         }
-        stage('second test'){
+        stage ('second test') {
             steps{
                 echo 'test completed'
             }
